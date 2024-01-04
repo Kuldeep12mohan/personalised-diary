@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>your thoughts</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      background: linear-gradient(to right, #ff6b6b, #3b5998); /* Different Gradient background */
+      color: #fff;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 15px; /* Add margin for spacing between thoughts */
+      padding: 10px;
+      color:black
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    form {
+      display: inline; /* Display forms inline to keep buttons on the same line */
+    }
+  </style>
+</head>
+<body>
+  <h2>
+    @<%=posts[posts.length-1]%> thoughts
+  </h2>
+  <ul>
+    <%for(let i=0;i<posts.length-1;++i){%>
+      <li><%=posts[i].thoughts%>
+        <!-- <a href="http://localhost:3000/thoughts?id=<%=posts[i].id%>&username=<%=posts[i].name%>"
+          >delete</a> -->
+      </li>
+    <%}%>
+  </ul>
+  <form method="get" action="/post/new">
+    <button>Post new thought</button>
+  </form>
+</body>
+</html>

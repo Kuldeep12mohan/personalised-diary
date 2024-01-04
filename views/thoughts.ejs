@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post your thoughts</title>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #3498db, #1abc9c); /* Gradient background */
+      color: #fff;
+      margin: 20px;
+      overflow: hidden; /* Ensure gradient doesn't overflow */
+    }
+
+    h3 {
+      color: #fff;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h3>Write your thought here</h3>
+  <form method="post" action="/user/post">
+    <input type="text" placeholder="Enter your username" name="username"><br><br>
+    <textarea name="thoughts" cols="30" rows="10"></textarea>
+    <br><br>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
