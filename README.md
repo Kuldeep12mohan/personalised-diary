@@ -1,6 +1,6 @@
 This web-app is designed for storing your personal ideas.
 To setup this project on your local machine--
-dependicies
+dependencies
 ->Node.js
 ->mySQL
 basic command to run on your CLI
